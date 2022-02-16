@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <title>myfirst blog</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+<body style="margin-top: 0px; margin-left: 0px;height: 100vh; margin-bottom: 0%;margin-right: 0%; background-image: url('tools.jpg');">
+<div class="general">
+    <div class="menu" style="">
+         <nav>
+
+        <ul style="direction: rtl; border-left: 1px solid #c64012; border-right: 1px solid #ed6637; display: block ruby; padding: 0; margin: 0; margin-right: 30px; list-style: none; float: right;">
+            <li style= "font: xx-large;">خانه
+            <ul style="position: relative;"> <li>hi</li></ul>
+            </li>
+              
+            <li style="position: relative;top: -16px;">Tutorials</li>
+            <li style="position: relative;top: -16px;"><a href="#">Photoshop</a></li>
+            <li style="position: relative;top: -16px;">Illustrator</li>
+            <li style="position: relative;top: -16px;"><a href="#">Web Design</a></li>
+         </ul>   
+
+        </nav>
+
+
+
+
+    </div>
+    <div class="gbox" style="width: 1084px;height: 617px;color: azure;position: absolute;margin-top: 50px;margin-left: 200px;top: -20px;">
+    
+        <div style="background-color: crimson;position: absolute;width: 800px;height: 75px;border-radius: 40%;right: 0px;top: 40px;left: 270px;bottom: 0px;background-color: rgb(8, 8, 4);"> <p style="font-size: larger;padding-left: 400px;padding-top: 15px;"> معرفی انواع اورفرز و کاربرد آن ها</p></div>
+    <div class="white" style="background-color: white;width: 750px;top: 110px;left: 300px;height: 600px;margin-top: 110px;margin-left: 300px;border-radius: 5%;"><p style="color: brown;direction: rtl;font-size: 20px;padding-top: 10px;margin-bottom: 0px;">
+
+        اورفرز ثابت را می‌توان نوعی فرز همه کاره به حساب آورد. از این دستگاه برای فرم دهی لبه‌های کار می‌توان استفاده کرد. پایه این دستگاه تنظیم شده و تیغه نیز به طول از پیش تعیین شده نصب شده است. برای هدایت اورفرز هم می‌توان از لبه قطعه کار و هم از فنس قفل شده به میز کار به عنوان راهنما استفاده کرد .
+
+        هنگام استفاده ازدستگاه فیکس دست‌ها بیشتر به قطعه کار نزدیک است؛ بنابراین هنگام حرکت دستگاه کنترل بیشتری روی آن خواهید داشت. بنابراین استفاده از این دستگاه به علت کنترل و ثبات بالا در کارهای بدون لبه بسیار ایده‌آل است.
+        
+        اورفرزهای وظیفه سنگین (Heavy Duty)، وظیفه متوسط (Medium Duty) و وظیفه سبک (Light Duty)
+        در مورد این اورفرزها، وظیفه به دو فاکتور مهم اشاره دارد: قدرت و اندازه دستگاه. در رابطه با این موارد لازم است که آن‌ها را بر اساس نیازتان انتخاب کنید و عواملی چون جنس قطعه کار و تعداد دفعات کار روی متریال را نیز در نظر بگیرید. فاکتور مهم دیگری که هنگام انتخاب باید در نظر گرفته شود مدت زمان کار با آن است.
+        
+    </p> 
+    <div style="direction: rtl;padding-top: 20px;height: 300px;">
+     <form action={% url "mycom:blogpath" %} method="post">
+     {% csrf_token %}
+         <label for="fname" style="color: black;direction: rtl;">نام و نام خانوادگی:</label><br>
+         <input type="text" name="firstname" id="fname"><br><br>
+         <label for="gname" style="color: black;"> آدرس جیمیل:</label><br>
+         <input type="email" name="gmail" id="gname"><br><br>
+         <input type="text" value="دیدگاه خود را بنویسید" style="height: 100px;width: 400px;" name="comment">
+         
+         <input type="submit" value="ارسال" style="width: 50px;height: 40px;">
+     </form>
+
+
+    </div>
+    
+     
+      {% for insta in first %}
+      <div style="color: black;height: 100px;background-color: aquamarine;direction: rtl;">
+        {{ insta.name }} : <br><br>
+        {{insta.comments}} <br>
+     </div>>
+     {% endfor %}
+    
+    
+    </div>
+     
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="left-side" style="width: 200px;height: 900px;background-color: blueviolet;" >
+     <h1  style="font-size: 16;margin-top: 0px;color: cadetblue;margin-left: 15px;direction: rtl;"><b>به وبلاگ فروش ابزار خوش امدین</b></h1>
+    
+    <h2 style="font-size: 16px;margin-top: 16px;margin-left: 2px;margin-bottom: 0px; direction: rtl;padding-right: 7px;">در این وبلاگ با انواع ابزارلات اشنا میشوید و میتوانید ابزار مورد نیاز  خود را تهییه کنید </h2>
+    
+    <i class="fas fa-tools" style="font-size: 85px; padding-top: 75px;padding-left: 60px;color: red;"></i>
+
+    <div class="icon reletionships">
+        <a href="https://www.instagram.com/soheil.mh"><i class="fab fa-instagram" style="color: pink; font-size: 45px;padding-left: 40px;padding-top: 45px;"> </i></a>
+        <a href="https://t.me/loxino01"><i class="fab fa-telegram" style="color: rgb(62, 155, 231);padding-left: 35px;font-size: 45px;"></i></a>
+       </div>
+
+
+    </div>
+    
+
+</div>
+
+
+
+
+</body>
+</html>
